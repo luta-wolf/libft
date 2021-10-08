@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 11:44:00 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/08 22:23:02 by einterdi         ###   ########.fr       */
+/*   Created: 2021/10/08 21:40:21 by einterdi          #+#    #+#             */
+/*   Updated: 2021/10/08 22:12:02 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <ctype.h>
-#include "libft.h"
+#ifndef LIBFT_H
+#define LIBFT_H
+typedef unsigned long size_t;
 
-int ft_isascii(int c)
-{
-    if (c >= 0 && c <= 127)
-        return 1;
-    else
-        return 0;
-}
+int ft_isalnum(int c);
+int ft_isalpha(int c);
+int ft_isascii(int c);
+int ft_isdigit(int c);
+int ft_isprint(int c);
+size_t  ft_strlen(char *str);
+
+
+#endif

@@ -6,12 +6,13 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 14:09:49 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/07 15:51:15 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/08 22:17:01 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+//#include <stdio.h>
+//#include <ctype.h>
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
@@ -19,13 +20,4 @@ int ft_isalnum(int c)
         return c;
     else
         return 0;    
-}
-
-int main()
-{
-    int a;
-
-    a = 102;
-    printf("%d",ft_isalnum(a));
-
 }

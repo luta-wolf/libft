@@ -6,12 +6,13 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:49:29 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/07 15:51:23 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/08 22:15:22 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdio.h>
+//#include <stdio.h>
+//#include <stdio.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
 {
@@ -22,7 +23,7 @@ int ft_isdigit(int c)
 
 }
 
-int main()
+/*int main()
 {
     printf("%d\n", ft_isdigit('5'));
-}
+}*/
