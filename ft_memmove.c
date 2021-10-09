@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 14:50:03 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/09 20:28:39 by einterdi         ###   ########.fr       */
+/*   Created: 2021/10/09 16:53:38 by einterdi          #+#    #+#             */
+/*   Updated: 2021/10/09 20:57:37 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dict, const void *str, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*dict2;
-	char	*str2;
+	char	*dst2;
+	char	*src2;
 
-	i = 0;
-	dict2 = (char *)dict;
-	str2 = (char *)str;
-	if (str2 == NULL && dict2 == NULL)
-		return (0);
-	while (i < n)
+	dst2 = (char *)dst;
+	src2 = (char *)src;
+	if (src == NULL && dst == NULL)
+		return (NULL);
+	if (dst2 > src2)
 	{
-		dict2[i] = str2[i];
-		i++;
+		while (len > 0)
+		{
+			dst2[len - 1] = src2[len - 1];
+			len--;
+		}
 	}
-	return (dict2);
+	else
+		dst2 = ft_memcpy(dst, src, len);
+	return (dst2);
 }
