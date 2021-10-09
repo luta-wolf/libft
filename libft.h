@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:40:21 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/08 22:12:02 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/09 14:19:47 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int ft_isascii(int c);
 int ft_isdigit(int c);
 int ft_isprint(int c);
 size_t  ft_strlen(char *str);
+void    *ft_memset(void *b, int c, size_t len);
+void ft_bzero(void *s, size_t n);
 
 
 #endif

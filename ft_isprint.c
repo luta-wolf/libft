@@ -6,17 +6,16 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:54:21 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/08 22:35:35 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/09 11:39:54 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <ctype.h>
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return c;
-    else
-        return 0;    
+	if (c >= 32 && c <= 126)
+		return (c);
+	else
+		return (0);
 }

@@ -6,17 +6,16 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:44:00 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/08 22:23:02 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/09 11:36:46 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <ctype.h>
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return 1;
-    else
-        return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
