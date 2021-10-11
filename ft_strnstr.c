@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 21:51:28 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/11 13:17:06 by einterdi         ###   ########.fr       */
+/*   Created: 2021/10/11 17:15:20 by einterdi          #+#    #+#             */
+/*   Updated: 2021/10/11 18:56:32 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-
-	if (n == 0)
-		return (0);
-	i = 0;
-	while (i < n - 1 && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-	{
-		i++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    size_t tmp;
+    
+    tmp = 0;
+    if (*needle == '\0')
+        return ((char *)haystack);
+    while (*haystack != len && *haystack != '\0')
+    {
+        while (*haystack == *needle)
+        {
+            haystack++;
+            needle++;
+        }
+        
+        haystack++;
+    }
 }
