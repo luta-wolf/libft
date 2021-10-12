@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:21:48 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/12 23:55:08 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/13 00:23:24 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,11 @@ int ft_atoi(const char *str)
     n = 0;
     flag = 1;
     while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' 
-        || str[i] == '\f' || str[i] == '\r')
+        || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
         i++;
     if (str[i] == '-')
-    {
         flag = -1;
-        i++;
-    } 
-    if (str[i] == '+')
+    if (str[i] == '-' || str[i] == '+')
         i++;
     while (ft_isdigit(str[i]))
         {
