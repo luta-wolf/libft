@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:53:38 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/10 12:41:17 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/12 13:04:16 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 		dst2 = ft_memcpy(dst, src, len);
-	return (dst2);
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:50:03 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/09 20:28:39 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/12 13:02:20 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dict, const void *str, size_t n)
 		dict2[i] = str2[i];
 		i++;
 	}
-	return (dict2);
+	return (dict);
 }
