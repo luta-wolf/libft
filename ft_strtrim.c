@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 23:15:38 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/14 00:57:35 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/14 01:13:26 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1);
+	if (!s1 || !set || !*s1 || !*set)
+		return (ft_calloc(0, 0));
 	while (ft_strchr(set, s1[i]))
 		i++;
-	if (s1[i] == '\0')
-		return (ft_strdup(""));
+
 	while (ft_strchr(set, s1[j]))
 		j--;
 
-//	что делать если первая и вторая строка состоит из пробелов?
+
 	mem = ft_substr(s1, i, j + 1 - i);
 	return (mem);
 }
