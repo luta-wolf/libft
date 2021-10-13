@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: einterdi <einterdi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:21:48 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/13 01:35:32 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:19:03 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_atoi(const char *str)
 {
-	int			i;
-	long int	n;
-	int			flag;
+	int						i;
+	int						flag;
+	unsigned long long int	nbr;
 
 	i = 0;
-	n = 0;
+	nbr = 0;
 	flag = 1;
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
 		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
@@ -30,12 +30,12 @@ int	ft_atoi(const char *str)
 		i++;
 	while (ft_isdigit(str[i]))
 	{
-		if (flag == 1 && n > 2147483647)
-			return (-1);
-		if (flag == -1 && n < -2147483648)
-			return (0);
-		n = n * 10 + str[i] - '0';
+		nbr = nbr * 10 + str[i] - '0';
 		i++;
 	}
-	return (n * flag);
+	if (flag == 1 && nbr >= 9223372036854775807u)
+		return (-1);
+	if (flag == -1 && nbr >= 9223372036854775808u)
+		return (0);
+	return (nbr * flag);
 }
