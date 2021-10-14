@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:25:14 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/13 21:49:04 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:54:55 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)s;
 	if (s == NULL)
 		return (0);
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	mem = (char *) malloc(len + 1);

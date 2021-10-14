@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:40:21 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/14 10:59:02 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/14 23:04:05 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
 //gcc test.c && ./a.out
+
+//ge-l6% ps
+//ge-l6% kill 29178
+//ge-l6% leaks 34102
