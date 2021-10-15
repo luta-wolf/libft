@@ -13,9 +13,13 @@ SRCS	= 	ft_isalnum.c	ft_isalpha.c	ft_isascii.c \
 			ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+SRCS_B	=	ft_lstnew.c
+
 HEADER	= 	libft.h
 
 OBJ		=	$(SRCS:.c=.o)
+
+OBJ_B	=	$(SRCS_B:.c=.0)
 
 CC		= 	gcc
 CFLAGS	=	 -Wall -Wextra -Werror
@@ -28,6 +32,9 @@ $(NAME)	:	$(OBJ)
 			ar r $(NAME) $^
 
 $(OBJ)	:	$(SRCS) $(HEADER)
+			$(CC) $(FLAFS) -c $(SRCS)
+
+$(OBJ_B)	:	$(SRCS_B) $(HEADER)
 			$(CC) $(FLAFS) -c $(SRCS)
 
 bonus	:
