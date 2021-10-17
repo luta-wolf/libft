@@ -39,9 +39,6 @@ $(OBJ)	:	$(SRCS) $(HEADER)
 $(OBJ_B)	:	$(SRCS_B) $(HEADER)
 			$(CC) $(FLAFS) -c $(SRCS_B)
 
-#bonus	:
-#			@make $(OBJ_B) all
-
 bonus	:	$(OBJ_B)
 			ar r $(NAME) $^
 
