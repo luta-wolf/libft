@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 00:02:00 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/16 01:08:01 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/17 12:35:33 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *mem;
+	t_list	*mem;
 
 	mem = malloc(sizeof(t_list) * 1);
 	if (mem == NULL)

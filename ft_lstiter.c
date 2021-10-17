@@ -6,7 +6,7 @@
 /*   By: einterdi <einterdi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 01:11:48 by einterdi          #+#    #+#             */
-/*   Updated: 2021/10/17 01:31:11 by einterdi         ###   ########.fr       */
+/*   Updated: 2021/10/17 12:33:43 by einterdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *iterator;
+	t_list	*iterator;
 
 	if (lst == NULL)
-		return;
+		return ;
 	iterator = lst;
-	while(iterator != NULL)
+	while (iterator != NULL)
 	{
 		f(iterator -> content);
 		iterator = iterator -> next;
