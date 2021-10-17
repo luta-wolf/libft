@@ -13,13 +13,15 @@ SRCS	= 	ft_isalnum.c	ft_isalpha.c	ft_isascii.c \
 			ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-SRCS_B	=	ft_lstnew.c
+SRCS_B	=	ft_lstnew.c			ft_lstadd_front.c	ft_lstsize.c \
+			ft_lstadd_back.c	ft_lstdelone.c		ft_lstlast.c \
+			ft_lstclear.c		ft_lstiter.c		ft_lstmap.c
 
 HEADER	= 	libft.h
 
-OBJ		=	$(SRCS:.c=.o)
+OBJ		=	$(SRCS:%.c=%.o)
 
-OBJ_B	=	$(SRCS_B:.c=.0)
+OBJ_B	=	$(SRCS_B:%.c=%.o)
 
 CC		= 	gcc
 CFLAGS	=	 -Wall -Wextra -Werror
@@ -35,13 +37,16 @@ $(OBJ)	:	$(SRCS) $(HEADER)
 			$(CC) $(FLAFS) -c $(SRCS)
 
 $(OBJ_B)	:	$(SRCS_B) $(HEADER)
-			$(CC) $(FLAFS) -c $(SRCS)
+			$(CC) $(FLAFS) -c $(SRCS_B)
 
-bonus	:
-			@make OBJ = "$(OBJ_B)" all
+#bonus	:
+#			@make $(OBJ_B) all
+
+bonus	:	$(OBJ_B)
+			ar r $(NAME) $^
 
 clean	:
-			@rm -rf $(OBJ)
+			@rm -rf $(OBJ) $(OBJ_B)
 
 fclean	:	clean
 			@rm -rf $(NAME)
